@@ -1,0 +1,14 @@
+/* src/components/about.css */
+@media (min-width: 768px) {
+    .about-container {
+      justify-content: start;
+      padding-left: 5rem; /* Customize as needed */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .about-container {
+      padding-left: 10rem; /* Customize as needed */
+    }
+  }
+  

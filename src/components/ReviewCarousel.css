@@ -1,0 +1,50 @@
+.custom-swiper-container {
+  width: 100%;
+  height: 100%;
+  overflow: visible; /* Ensure that overlapping elements are visible */
+}
+
+.custom-slide {
+  width: 50%; /* Center slide takes 50% of the screen */
+  transition: transform 0.5s ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+  width: 30%; /* Previous and next slides take 30% each */
+  transform: scale(0.9); /* Scale down the side slides */
+  z-index: 10; /* Ensure side slides are below the center slide */
+}
+
+.swiper-slide-active {
+  transform: scale(1); /* Scale up the center slide */
+  z-index: 30; /* Ensure the center slide is on top */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: static; /* Remove the default positioning */
+  margin-top: 20px; /* Space from the slides */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #6b21a8; /* Adjust to match your design */
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: scale(1.1);
+  background-color: #7e3af2; /* Adjust to match your design */
+}

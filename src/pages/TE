@@ -1,0 +1,359 @@
+import { BiParty, BiMaleFemale } from 'react-icons/bi';
+import { IoIosArrowDown, IoSpeedometerOutline } from "react-icons/io";
+import { LuUser2 } from "react-icons/lu";
+import { FaMusic } from "react-icons/fa";
+import { PiGuitarLight } from "react-icons/pi";
+import { IoMdMusicalNote } from "react-icons/io";
+import { MdAlternateEmail } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+import { CgToggleOff } from "react-icons/cg";
+import select_icon from '../assets/select_icon.png';
+import i_icon from '../assets/i_icon.png';
+import pay_icon from '../assets/pay_icon.png';
+import bill_icon from '../assets/bill_icon.png';
+import './GetStarted.css';
+
+function GetStartedForm({ onClose }) {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Handle form submission logic
+  };
+
+  return (
+    <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50 overflow-x-hidden">
+      <div className="bg-white rounded-lg w-full max-w-3xl mx-4 md:mx-0 shadow-lg max-h-[90vh] overflow-y-auto">
+        <div className="text-2xl font-bold bg-secondary text-white rounded-t-lg flex justify-between items-center p-3">
+          <h2>Get Started</h2>
+          <button onClick={onClose} className="text-white hover:text-gray-300">
+            X
+          </button>
+        </div>
+        <form onSubmit={handleSubmit} className="p-6 space-y-4">
+          {/* Occasion Section */}
+          <div className="flex flex-col md:flex-row gap-7">
+            <div className="relative text-md w-full md:w-7/10">
+              <label htmlFor="occasionType" className="text-xl font-semibold text-gray-700">
+                Occasion Type <span className="text-red-600">*</span>
+              </label>
+              <div className="relative mt-1 pl-3">
+                <select
+                  id="occasionType"
+                  className="shadow appearance-none border rounded-xl w-full py-6 px-3 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                >
+                  <option>Select Occasion Type</option>
+                  {/* Add more options as needed */}
+                </select>
+                <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                  <IoIosArrowDown className="text-gray-500 w-5 h-5" />
+                </div>
+                <div className="absolute inset-y-0 left-0 flex items-center">
+                  <div className="bg-thirdColor h-full w-12 flex items-center justify-center rounded-l-xl">
+                    <BiParty className="text-white w-6 h-6" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="relative text-md w-full md:w-1/3">
+              <label htmlFor="occasionDate" className="text-xl font-semibold text-gray-700">
+                Occasion Date <span className="text-red-600">*</span>
+              </label>
+              <div className="relative mt-1 pl-3">
+                <input
+                  type="date"
+                  id="occasionDate"
+                  className="shadow appearance-none border rounded-xl w-full py-6 px-3 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  placeholder="--/--/----"
+                />
+                <div className="absolute inset-y-0 left-0 flex items-center">
+                  <div className="bg-thirdColor h-full w-12 flex items-center justify-center rounded-l-xl">
+                    <BiParty className="text-white w-6 h-6" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Personal Information Section */}
+          <div>
+            <h6 className="text-secondary font-bold text-sm mb-3">Personal Information:</h6>
+            <div className="flex flex-col md:flex-row gap-7">
+              <div className="relative text-md w-full md:w-1/3">
+                <label htmlFor="yourName" className="text-xl font-semibold text-gray-700">
+                  Your Name <span className="text-red-600">*</span>
+                </label>
+                <div className="relative mt-1 pl-3">
+                  <input
+                    type="text"
+                    id="yourName"
+                    className="shadow appearance-none border rounded-xl w-full py-6 px-3 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Enter Your Name"
+                  />
+                  <div className="absolute inset-y-0 left-0 flex items-center">
+                    <div className="bg-thirdColor h-full w-12 flex items-center justify-center rounded-l-xl">
+                      <LuUser2 className="text-white w-6 h-6" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative text-md w-full md:w-1/3">
+                <label htmlFor="recipientName" className="text-xl font-semibold text-gray-700">
+                  Recipient’s Name <span className="text-red-600">*</span>
+                </label>
+                <div className="relative mt-1 pl-3">
+                  <input
+                    type="text"
+                    id="recipientName"
+                    className="shadow appearance-none border rounded-xl w-full py-6 px-3 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Enter Recipient Name"
+                  />
+                  <div className="absolute inset-y-0 left-0 flex items-center">
+                    <div className="bg-thirdColor h-full w-12 flex items-center justify-center rounded-l-xl">
+                      <LuUser2 className="text-white w-6 h-6" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative text-md w-full md:w-1/3">
+                <label htmlFor="relationship" className="text-xl font-semibold text-gray-700">
+                  Relationship <span className="text-red-600">*</span>
+                </label>
+                <div className="relative mt-1 pl-3">
+                  <select
+                    id="relationship"
+                    className="shadow appearance-none border rounded-xl w-full py-6 px-3 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  >
+                    <option>Select</option>
+                    {/* Add more options as needed */}
+                  </select>
+                  <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                    <IoIosArrowDown className="text-gray-500 w-5 h-5" />
+                  </div>
+                  <div className="absolute inset-y-0 left-0 flex items-center">
+                    <div className="bg-thirdColor h-full w-12 flex items-center justify-center rounded-l-xl">
+                      <img src={select_icon} alt="Select Icon" className="text-gray-500 w-7 h-7" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Song Details Section */}
+          <div>
+            <h6 className="text-secondary font-bold text-sm mb-3">Song Details:</h6>
+            <div className="flex flex-col md:flex-row gap-7">
+              <div className="relative text-md w-full md:w-1/2">
+                <label htmlFor="songTheme" className="text-xl font-semibold text-gray-700">
+                  Song Theme <span className="text-red-600">*</span>
+                </label>
+                <div className="relative mt-1 pl-3">
+                  <input
+                    type="text"
+                    id="songTheme"
+                    className="shadow appearance-none border rounded-xl w-full py-6 px-3 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Enter Song Theme"
+                  />
+                  <div className="absolute inset-y-0 left-0 flex items-center">
+                    <div className="bg-thirdColor h-full w-12 flex items-center justify-center rounded-l-xl">
+                      <FaMusic className="text-white w-6 h-6" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative text-md w-full md:w-1/2">
+                <label htmlFor="songGenre" className="text-xl font-semibold text-gray-700">
+                  Song Genre <span className="text-red-600">*</span>
+                </label>
+                <div className="relative mt-1 pl-3">
+                  <input
+                    type="text"
+                    id="songGenre"
+                    className="shadow appearance-none border rounded-xl w-full py-6 px-3 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Enter Song Genre"
+                  />
+                  <div className="absolute inset-y-0 left-0 flex items-center">
+                    <div className="bg-thirdColor h-full w-12 flex items-center justify-center rounded-l-xl">
+                      <IoMdMusicalNote className="text-white w-6 h-6" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Information Section */}
+          <div>
+            <h6 className="text-secondary font-bold text-sm mb-3">Contact Information:</h6>
+            <div className="flex flex-col md:flex-row gap-7">
+              <div className="relative text-md w-full md:w-1/2">
+                <label htmlFor="emailAddress" className="text-xl font-semibold text-gray-700">
+                  Email Address <span className="text-red-600">*</span>
+                </label>
+                <div className="relative mt-1 pl-3">
+                  <input
+                    type="email"
+                    id="emailAddress"
+                    className="shadow appearance-none border rounded-xl w-full py-6 px-3 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Enter Your Email Address"
+                  />
+                  <div className="absolute inset-y-0 left-0 flex items-center">
+                    <div className="bg-thirdColor h-full w-12 flex items-center justify-center rounded-l-xl">
+                      <MdAlternateEmail className="text-white w-6 h-6" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative text-md w-full md:w-1/2">
+                <label htmlFor="phoneNumber" className="text-xl font-semibold text-gray-700">
+                  Phone Number <span className="text-red-600">*</span>
+                </label>
+                <div className="relative mt-1 pl-3">
+                  <input
+                    type="tel"
+                    id="phoneNumber"
+                    className="shadow appearance-none border rounded-xl w-full py-6 px-3 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Enter Your Phone Number"
+                  />
+                  <div className="absolute inset-y-0 left-0 flex items-center">
+                    <div className="bg-thirdColor h-full w-12 flex items-center justify-center rounded-l-xl">
+                      <FaPhoneAlt className="text-white w-6 h-6" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Order Information Section */}
+          <div>
+            <h6 className="text-secondary font-bold text-sm mb-3">Order Information:</h6>
+            <div className="flex flex-col md:flex-row gap-7">
+              <div className="relative text-md w-full md:w-1/3">
+                <label htmlFor="quantity" className="text-xl font-semibold text-gray-700">
+                  Quantity <span className="text-red-600">*</span>
+                </label>
+                <div className="relative mt-1 pl-3">
+                  <input
+                    type="number"
+                    id="quantity"
+                    className="shadow appearance-none border rounded-xl w-full py-6 px-3 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Enter Quantity"
+                  />
+                  <div className="absolute inset-y-0 left-0 flex items-center">
+                    <div className="bg-thirdColor h-full w-12 flex items-center justify-center rounded-l-xl">
+                      <IoSpeedometerOutline className="text-white w-6 h-6" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative text-md w-full md:w-1/3">
+                <label htmlFor="toggleMessage" className="text-xl font-semibold text-gray-700">
+                  Toggle Message <span className="text-red-600">*</span>
+                </label>
+                <div className="relative mt-1 pl-3">
+                  <select
+                    id="toggleMessage"
+                    className="shadow appearance-none border rounded-xl w-full py-6 px-3 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  >
+                    <option>Select</option>
+                    {/* Add more options as needed */}
+                  </select>
+                  <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                    <IoIosArrowDown className="text-gray-500 w-5 h-5" />
+                  </div>
+                  <div className="absolute inset-y-0 left-0 flex items-center">
+                    <div className="bg-thirdColor h-full w-12 flex items-center justify-center rounded-l-xl">
+                      <CgToggleOff className="text-white w-6 h-6" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Payment Information Section */}
+          <div>
+            <h6 className="text-secondary font-bold text-sm mb-3">Payment Information:</h6>
+            <div className="flex flex-col md:flex-row gap-7">
+              <div className="relative text-md w-full md:w-1/2">
+                <label htmlFor="paymentMethod" className="text-xl font-semibold text-gray-700">
+                  Payment Method <span className="text-red-600">*</span>
+                </label>
+                <div className="relative mt-1 pl-3">
+                  <select
+                    id="paymentMethod"
+                    className="shadow appearance-none border rounded-xl w-full py-6 px-3 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  >
+                    <option>Select</option>
+                    {/* Add more options as needed */}
+                  </select>
+                  <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                    <IoIosArrowDown className="text-gray-500 w-5 h-5" />
+                  </div>
+                  <div className="absolute inset-y-0 left-0 flex items-center">
+                    <div className="bg-thirdColor h-full w-12 flex items-center justify-center rounded-l-xl">
+                      <img src={pay_icon} alt="Payment Icon" className="text-gray-500 w-7 h-7" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="relative text-md w-full md:w-1/2">
+                <label htmlFor="billingAddress" className="text-xl font-semibold text-gray-700">
+                  Billing Address <span className="text-red-600">*</span>
+                </label>
+                <div className="relative mt-1 pl-3">
+                  <input
+                    type="text"
+                    id="billingAddress"
+                    className="shadow appearance-none border rounded-xl w-full py-6 px-3 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    placeholder="Enter Billing Address"
+                  />
+                  <div className="absolute inset-y-0 left-0 flex items-center">
+                    <div className="bg-thirdColor h-full w-12 flex items-center justify-center rounded-l-xl">
+                      <img src={bill_icon} alt="Billing Icon" className="text-gray-500 w-7 h-7" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Additional Information Section */}
+          <div>
+            <h6 className="text-secondary font-bold text-sm mb-3">Additional Information:</h6>
+            <div className="relative text-md w-full">
+              <label htmlFor="additionalInfo" className="text-xl font-semibold text-gray-700">
+                Additional Information
+              </label>
+              <div className="relative mt-1 pl-3">
+                <textarea
+                  id="additionalInfo"
+                  className="shadow appearance-none border rounded-xl w-full py-6 px-3 pl-12 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                  placeholder="Enter Additional Information"
+                  rows="5"
+                ></textarea>
+                <div className="absolute inset-y-0 left-0 flex items-center">
+                  <div className="bg-thirdColor h-full w-12 flex items-center justify-center rounded-l-xl">
+                    <img src={i_icon} alt="Info Icon" className="text-gray-500 w-7 h-7" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Submit Button */}
+          <div className="flex justify-end mt-5">
+            <button
+              type="submit"
+              className="bg-thirdColor hover:bg-thirdColorHover text-white font-bold py-3 px-8 rounded-xl focus:outline-none focus:shadow-outline"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+
+export default GetStartedForm;

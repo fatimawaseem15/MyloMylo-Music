@@ -1,0 +1,6 @@
+/* Add this to your global or component-specific CSS */
+input::placeholder {
+    color: gray; /* Adjust color if needed */
+    line-height: 1.5; /* Adjust line-height to vertically center placeholder */
+  }
+  
